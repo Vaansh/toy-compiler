@@ -1,0 +1,22 @@
+// line comment
+
+/ not a line comment 
+
+/* something 
+/*
+    multiple
+    lines
+*/
+
+/*
+    **********
+    multiple
+    lines
+    with stars
+    **********
+*/
+
+/* more comments */
+
+/* unclosed comment /*
+still inside unclosed comment

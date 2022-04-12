@@ -1,0 +1,21 @@
+func somethingdoer() -> void
+{
+  let variable: integer;  
+  
+  // SYNTAX ERROR - supposed to be:
+  //        variable = 1;
+  variable 1;
+  
+  // SYNTAX ERROR - supposed to be:
+  //        while(variable <= 10)
+  (variable <= 10)
+  {
+    write(variable);    
+  };
+}
+
+struct LEXER {
+    // SYNTAX ERROR - supposed to be:
+    //        public func dosomething(x: float) -> float;
+	public func dosomething(x: float) float;
+};

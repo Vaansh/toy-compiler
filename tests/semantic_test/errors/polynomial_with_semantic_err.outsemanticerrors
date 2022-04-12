@@ -1,0 +1,13 @@
+Semantic Error - multiply declared class: 'POLYNOMIAL'
+Semantic Warning - Overloaded member function: 'evaluate' with 1 parameter(s): float & integer
+Semantic Error - multiply declared identifier in class: 'b' initialized 2 times
+Semantic Error - Overridden inherited member function: 'evaluate' in class 'LINEAR'
+Semantic Error - Overridden inherited member function: 'evaluate' in class 'QUADRATIC'
+Semantic Error - undeclared member function definition: 'build2 (float, float, float)'
+Semantic Error - multiply defined free function: 'f (integer)'
+Semantic Warning - Overloaded free function: 'f (integer, integer)'
+Semantic Error - multiply declared identifier in function: 'counter'
+Semantic Error - Use of array with wrong number of dimensions: Used '1' dimensions, but defined number of dimensions were '2'
+Semantic Error - Array index is not an integer: '1.3'
+Semantic Error - '.' operator used on non-class type: 'integer' with value 'counter'
+Semantic Error - Circular class dependencies found: 'C' -> 'E', 'D' -> 'C', 'E' -> 'D'

@@ -1,0 +1,19 @@
+func dosomethingfunction(arr: integer[], size: integer) -> void 
+{
+  let n: integer;
+  // SYNTAX ERROR - supposed to be:
+  //        let i: integer;
+  integer; 
+  i = 0; 
+  while (i < n) { 
+    write(arr[i]);
+      i = i+1;
+  };
+} 
+
+
+// SYNTAX ERROR - supposed to be:
+//        struct RANDOM {
+struct RANDOM    
+	public func dosomething(x: float) float;
+};

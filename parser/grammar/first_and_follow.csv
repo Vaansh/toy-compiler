@@ -1,0 +1,59 @@
+Nonterminal,First,Follow
+START,"struct, impl , func",EPSILON
+Sign,"plus, minus","id, intlit, floatlit, openpr, not, plus, minus"
+Type,"integer, float, id","closepr, opencpr, comma, openspr, semi"
+aParams,"id, intlit, floatlit, openpr, not, plus, minus",closepr
+aParamsRep,comma,closepr
+aParamsTail,comma,"comma, closepr"
+addOp,"plus, minus, or","id, intlit, floatlit, openpr, not, plus, minus"
+arithExpr,"id, intlit, floatlit, openpr, not, plus, minus","closespr, eq, neq, lt, gt, lesseq, greateq, comma, closepr, semi"
+arithExprRep,"plus, minus, or","closespr, eq, neq, lt, gt, lesseq, greateq, comma, closepr, semi"
+arraySize,openspr,"semi, openspr, closepr, comma"
+arraySizeOpt,"intlit, closespr","semi, openspr, closepr, comma"
+assignOp,assgn,"id, intlit, floatlit, openpr, not, plus, minus"
+assignStatementRep,"dot, assgn","else, semi, let, id, if, while, read, write, return, closecpr"
+commaIdRep,comma,opencpr
+expr,"id, intlit, floatlit, openpr, not, plus, minus","comma, closepr, semi"
+exprOpt,"eq, neq, lt, gt, lesseq, greateq","comma, closepr, semi"
+fParams,id,closepr
+fParamsEndRep,openspr,"comma, closepr"
+fParamsTail,comma,"comma, closepr"
+fParamsTailOptRepFactor,comma,closepr
+factor,"id, intlit, floatlit, openpr, not, plus, minus","mult, div, and, closespr, eq, neq, lt, gt, lesseq, greateq, plus, minus, or, comma, closepr, semi"
+factorOpt,"openpr, dot, openspr","mult, div, and, closespr, eq, neq, lt, gt, lesseq, greateq, plus, minus, or, comma, closepr, semi"
+factorOptNext,dot,"mult, div, and, closespr, eq, neq, lt, gt, lesseq, greateq, plus, minus, or, comma, closepr, semi"
+factorOptNext,openspr,"closepr, comma"
+funcBody,opencpr,"struct, impl, func, closecprr"
+funcBodyRep,"let, id, if, while, read, write, return",closecprr
+funcDecl,func,"closecprr, public, private"
+funcDef,func,"struct, impl, func, closecpr"
+funcHead,func,"semi, opencpr"
+implDef,impl,"struct, impl, func"
+implDefRep,func,closecpr
+indice,openspr,"mult, div, and, openspr, assgn, dot, closespr, eq, neq, lt, gt, lesseq, greateq, plus, minus, or, comma, closepr, semi"
+indiceList,openspr,"mult, div, and, assgn, dot, closespr, eq, neq, lt, gt, lesseq, greateq, plus, minus, or, comma, closepr, semi"
+indiceListStatementRep,"openpr, dot, openspr, assgn","else, semi, let, id, if, while, read, write, return, closecpr"
+indiceListStatementRepEnd,"dot, semi","else, semi, let, id, if, while, read, write, return, closecpr"
+indiceListVariable,"openpr, dot, openspr",closepr
+indiceListVariableRep,dot,closepr
+indiceListVariableRepEnd,dot,closepr
+memberDecl,"let, func","closecpr, public, private"
+multOp,"mult, div, and","id, intlit, floatlit, openpr, not, plus, minus"
+prog,"struct, impl, func",EPSILON
+progRep,"struct, impl, func",EPSILON
+relExpr,"id, intlit, floatlit, openpr, not, plus, minus",closepr
+relOp,"eq, neq, lt, gt, lesseq, greateq","id, intlit, floatlit, openpr, not, plus, minus"
+returnType,"void, integer, float, id","semi, opencpr"
+statBlock,"opencpr, id, if, while, read, write, return","else, semi"
+statement,"id, if, while, read, write, return","else, semi, let, id, if, while, read, write, return, closecpr"
+statementRep,"id, if, while, read, write, return",closecpr
+structDecl,struct,"struct, impl, func"
+structDeclOpt,inherits,opencpr
+structDeclRep,"public, private",closecpr
+structOrImplOrFunc,"struct, impl, func","struct, impl, func"
+term,"id, intlit, floatlit, openpr, not, plus, minus","closespr, eq, neq, lt, gt, lesseq, greateq, plus, minus, or, comma, closepr, semi"
+varDecl,let,"public, private, let, id, if, while, read, write, return, closecpr"
+varDeclOrStat,"let, id, if, while, read, write, return","let, id, if, while, read, write, return, closecpr"
+varDeclRep,openspr,semi
+variable,id ,closepr
+visibility,"public, private","let, func"

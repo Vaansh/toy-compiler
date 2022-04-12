@@ -1,0 +1,172 @@
+START  ::=  prog
+
+prog  ::=  progRep
+
+progRep  ::=  structOrImplOrFunc progRep
+         | EPSILON
+
+structOrImplOrFunc  ::=  funcDef
+                    | implDef
+                    | structDecl
+
+funcDef  ::=  funcHead funcBody
+
+funcHead  ::=  func id openpr fParams closepr arrow returnType
+
+fParams  ::=  id colon Type arraySizeOptRepFactor fParamsTailOptRepFactor
+         | EPSILON
+
+Type  ::=  float
+      | id
+      | integer
+
+arraySizeOptRepFactor  ::=  arraySize arraySizeOptRepFactor
+
+arraySize  ::=  openspr arraySizeOpt
+
+arraySizeOpt  ::=  closespr
+              | intlit closespr
+
+fParamsTailOptRepFactor  ::=  fParamsTail fParamsTailOptRepFactor
+                         | EPSILON
+
+fParamsTail  ::=  comma id colon Type fParamsEndRep
+
+fParamsEndRep  ::=  arraySize fParamsEndRep
+               | EPSILON
+
+returnType  ::=  Type
+            | void
+
+funcBody  ::=  opencpr funcBodyRep closecpr
+
+funcBodyRep  ::=  varDeclOrStat funcBodyRep
+             | EPSILON
+
+varDeclOrStat  ::=  statement
+               | varDecl
+
+statement  ::=  id indiceListStatementRep
+           | if openpr relExpr closepr then statBlock else statBlock semi
+           | read openpr variable closepr semi
+           | return openpr expr closepr semi
+           | while openpr relExpr closepr statBlock semi
+           | write openpr expr closepr semi
+
+indiceListStatementRep  ::=  indiceList assignStatementRep
+                        | openpr aParams closepr indiceListStatementRepEnd
+
+indiceList  ::=  indice indiceList
+            | EPSILON
+
+indice  ::=  openspr arithExpr closespr
+
+assignStatementRep  ::=  assignOp expr semi
+                    | dot id indiceListStatementRep
+
+assignOp  ::=  assgn
+
+aParams  ::=  expr aParamsRep
+         | EPSILON
+
+aParamsRep  ::=  aParamsTail aParamsRep
+            | EPSILON
+
+aParamsTail  ::=  comma expr
+
+indiceListStatementRepEnd  ::=  dot id indiceListStatementRep
+                           | semis
+
+relExpr  ::=  arithExpr relOp arithExpr
+
+statBlock  ::=  opencpr statementRep closecpr
+           | statement
+           | EPSILON
+
+statementRep  ::=  statement statementRep
+              | EPSILON
+
+variable  ::=  id indiceListVariable
+
+indiceListVariable         ::=  indiceList indiceListVariableRep
+                              | openpr aParams closepr indiceListVariableRepEnd
+
+indiceListVariableRep      ::=  dot id indiceListVariable
+                              | EPSILON
+
+indiceListVariableRepEnd   ::=  dot id indiceListVariable
+
+expr  ::=  arithExpr exprOpt
+
+arithExpr  ::=  term arithExprRep
+
+term  ::=  factor multopFactorRep
+
+multopFactorRep  ::=  multOp factor multopFactorRep
+                 | EPSILON
+
+factor  ::=  Sign factor
+        | floatlit
+        | id factorOpt
+        | intlit
+        | not factor
+        | openpr arithExpr closepr
+
+Sign  ::=  minus
+      | plus
+
+factorOpt  ::=  indiceList factorOptNext
+           | openpr aParams closepr factorOptNext
+
+factorOptNext  ::=  dot id factorOpt
+               | EPSILON
+
+multOp  ::=  and
+        | div
+        | mult
+
+arithExprRep  ::=  addOp term arithExprRep
+              | EPSILON
+
+addOp::=  minus
+       | or
+       | plus
+
+exprOpt  ::=  relOp arithExpr
+         | EPSILON
+
+relOp  ::=  eq
+       | greateq
+       | gt
+       | lesseq
+       | lt
+       | neq
+
+varDecl  ::=  let id colon Type varDeclRep semi
+
+varDeclRep  ::=  arraySize varDeclRep
+            | EPSILON
+
+implDef  ::=  impl id opencpr implDefRep closecpr
+
+implDefRep  ::= funcDef implDefRep
+            | EPSILON
+
+structDecl  ::=  struct id structDeclOpt opencpr structDeclRep closecpr semi
+
+structDeclOpt  ::=  inherits id commaIdRep
+               | EPSILON
+
+commaIdRep  ::=  comma id commaIdRep
+            | EPSILON
+
+structDeclRep  ::=  visibility memberDecl structDeclRep
+               | EPSILON
+
+visibility  ::=  private
+            | public
+
+memberDecl  ::=  funcDecl
+            | varDecl
+
+funcDecl  ::=  funcHead semi

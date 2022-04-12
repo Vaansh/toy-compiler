@@ -1,0 +1,20 @@
+// valid integers
+0
+10
+123
+
+// valid floats
+30.0
+60.0000000000006
+1.1289e0
+120.002e-16
+
+// invalid integers
+00
+010
+0123
+
+// invalid floats
+1.1289e
+120.002f-16
+0.000000000000

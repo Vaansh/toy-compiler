@@ -1,0 +1,7 @@
+[invalidchar, #, 27, 1]
+[invalidchar, $, 28, 1]
+[invalidchar, %, 29, 1]
+[invalidchar, ?, 30, 1]
+[invalidchar, ^, 31, 1]
+[invalidchar, ~, 32, 1]
+[invalidchar, @, 33, 1]

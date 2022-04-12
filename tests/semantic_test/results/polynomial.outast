@@ -1,0 +1,594 @@
+======================================================================================================
+|                                Tree                                 |            Lexeme            |
+======================================================================================================
+Prog                                                                  |                              |
+| StructDecl                                                          |                              |
+| | Id                                                                |          POLYNOMIAL          |
+| | InheritsList                                                      |                              |
+| | MemberList                                                        |                              |
+| | | Member                                                          |                              |
+| | | | Visibility                                                    |            public            |
+| | | | FuncDecl                                                      |                              |
+| | | | | Id                                                          |           evaluate           |
+| | | | | FParamsList                                                 |                              |
+| | | | | | FParam                                                    |                              |
+| | | | | | | Id                                                      |               x              |
+| | | | | | | Type                                                    |             float            |
+| | | | | | | ArraySize                                               |                              |
+| | | | | Type                                                        |             float            |
+| StructDecl                                                          |                              |
+| | Id                                                                |            LINEAR            |
+| | InheritsList                                                      |                              |
+| | | Id                                                              |          POLYNOMIAL          |
+| | MemberList                                                        |                              |
+| | | Member                                                          |                              |
+| | | | Visibility                                                    |            private           |
+| | | | VarDecl                                                       |                              |
+| | | | | Id                                                          |               a              |
+| | | | | Type                                                        |             float            |
+| | | | | ArraySize                                                   |                              |
+| | | Member                                                          |                              |
+| | | | Visibility                                                    |            private           |
+| | | | VarDecl                                                       |                              |
+| | | | | Id                                                          |               b              |
+| | | | | Type                                                        |             float            |
+| | | | | ArraySize                                                   |                              |
+| | | Member                                                          |                              |
+| | | | Visibility                                                    |            public            |
+| | | | FuncDecl                                                      |                              |
+| | | | | Id                                                          |             build            |
+| | | | | FParamsList                                                 |                              |
+| | | | | | FParam                                                    |                              |
+| | | | | | | Id                                                      |               A              |
+| | | | | | | Type                                                    |             float            |
+| | | | | | | ArraySize                                               |                              |
+| | | | | | FParam                                                    |                              |
+| | | | | | | Id                                                      |               B              |
+| | | | | | | Type                                                    |             float            |
+| | | | | | | ArraySize                                               |                              |
+| | | | | Type                                                        |            LINEAR            |
+| | | Member                                                          |                              |
+| | | | Visibility                                                    |            public            |
+| | | | FuncDecl                                                      |                              |
+| | | | | Id                                                          |           evaluate           |
+| | | | | FParamsList                                                 |                              |
+| | | | | | FParam                                                    |                              |
+| | | | | | | Id                                                      |               x              |
+| | | | | | | Type                                                    |             float            |
+| | | | | | | ArraySize                                               |                              |
+| | | | | Type                                                        |             float            |
+| StructDecl                                                          |                              |
+| | Id                                                                |           QUADRATIC          |
+| | InheritsList                                                      |                              |
+| | | Id                                                              |          POLYNOMIAL          |
+| | MemberList                                                        |                              |
+| | | Member                                                          |                              |
+| | | | Visibility                                                    |            private           |
+| | | | VarDecl                                                       |                              |
+| | | | | Id                                                          |               a              |
+| | | | | Type                                                        |             float            |
+| | | | | ArraySize                                                   |                              |
+| | | Member                                                          |                              |
+| | | | Visibility                                                    |            private           |
+| | | | VarDecl                                                       |                              |
+| | | | | Id                                                          |               b              |
+| | | | | Type                                                        |             float            |
+| | | | | ArraySize                                                   |                              |
+| | | Member                                                          |                              |
+| | | | Visibility                                                    |            private           |
+| | | | VarDecl                                                       |                              |
+| | | | | Id                                                          |               c              |
+| | | | | Type                                                        |             float            |
+| | | | | ArraySize                                                   |                              |
+| | | Member                                                          |                              |
+| | | | Visibility                                                    |            public            |
+| | | | FuncDecl                                                      |                              |
+| | | | | Id                                                          |             build            |
+| | | | | FParamsList                                                 |                              |
+| | | | | | FParam                                                    |                              |
+| | | | | | | Id                                                      |               A              |
+| | | | | | | Type                                                    |             float            |
+| | | | | | | ArraySize                                               |                              |
+| | | | | | FParam                                                    |                              |
+| | | | | | | Id                                                      |               B              |
+| | | | | | | Type                                                    |             float            |
+| | | | | | | ArraySize                                               |                              |
+| | | | | | FParam                                                    |                              |
+| | | | | | | Id                                                      |               C              |
+| | | | | | | Type                                                    |             float            |
+| | | | | | | ArraySize                                               |                              |
+| | | | | Type                                                        |           QUADRATIC          |
+| | | Member                                                          |                              |
+| | | | Visibility                                                    |            public            |
+| | | | FuncDecl                                                      |                              |
+| | | | | Id                                                          |           evaluate           |
+| | | | | FParamsList                                                 |                              |
+| | | | | | FParam                                                    |                              |
+| | | | | | | Id                                                      |               x              |
+| | | | | | | Type                                                    |             float            |
+| | | | | | | ArraySize                                               |                              |
+| | | | | Type                                                        |             float            |
+| Impldef                                                             |                              |
+| | Id                                                                |          POLYNOMIAL          |
+| | ImplFuncDefRep                                                    |                              |
+| | | MemberFunc                                                      |                              |
+| | | | Id                                                            |           evaluate           |
+| | | | FParamsList                                                   |                              |
+| | | | | FParam                                                      |                              |
+| | | | | | Id                                                        |               x              |
+| | | | | | Type                                                      |             float            |
+| | | | | | ArraySize                                                 |                              |
+| | | | Type                                                          |             float            |
+| | | | VarDeclOrStat                                                 |                              |
+| | | | | ReturnStatement                                             |                              |
+| | | | | | Expr                                                      |                              |
+| | | | | | | ArithExpr                                               |                              |
+| | | | | | | | Term                                                  |                              |
+| | | | | | | | | Factor                                              |                              |
+| | | | | | | | | | IntLit                                            |               0              |
+| Impldef                                                             |                              |
+| | Id                                                                |           QUADRATIC          |
+| | ImplFuncDefRep                                                    |                              |
+| | | MemberFunc                                                      |                              |
+| | | | Id                                                            |           evaluate           |
+| | | | FParamsList                                                   |                              |
+| | | | | FParam                                                      |                              |
+| | | | | | Id                                                        |               x              |
+| | | | | | Type                                                      |             float            |
+| | | | | | ArraySize                                                 |                              |
+| | | | Type                                                          |             float            |
+| | | | VarDeclOrStat                                                 |                              |
+| | | | | VarDecl                                                     |                              |
+| | | | | | Id                                                        |            result            |
+| | | | | | Type                                                      |             float            |
+| | | | | | ArraySize                                                 |                              |
+| | | | | AssignStatement                                             |                              |
+| | | | | | DotList                                                   |                              |
+| | | | | | | Dot                                                     |                              |
+| | | | | | | | Id                                                    |            result            |
+| | | | | | | | IndiceReps                                            |                              |
+| | | | | | AssignOp                                                  |               =              |
+| | | | | | Expr                                                      |                              |
+| | | | | | | ArithExpr                                               |                              |
+| | | | | | | | Term                                                  |                              |
+| | | | | | | | | Factor                                              |                              |
+| | | | | | | | | | DotList                                           |                              |
+| | | | | | | | | | | Dot                                             |                              |
+| | | | | | | | | | | | Id                                            |               a              |
+| | | | | | | | | | | | IndiceReps                                    |                              |
+| | | | | AssignStatement                                             |                              |
+| | | | | | DotList                                                   |                              |
+| | | | | | | Dot                                                     |                              |
+| | | | | | | | Id                                                    |            result            |
+| | | | | | | | IndiceReps                                            |                              |
+| | | | | | AssignOp                                                  |               =              |
+| | | | | | Expr                                                      |                              |
+| | | | | | | AddOp                                                   |                              |
+| | | | | | | | ArithExpr                                             |                              |
+| | | | | | | | | Term                                                |                              |
+| | | | | | | | | | MultOp                                            |                              |
+| | | | | | | | | | | Factor                                          |                              |
+| | | | | | | | | | | | DotList                                       |                              |
+| | | | | | | | | | | | | Dot                                         |                              |
+| | | | | | | | | | | | | | Id                                        |            result            |
+| | | | | | | | | | | | | | IndiceReps                                |                              |
+| | | | | | | | | | | Mult                                            |                              |
+| | | | | | | | | | | Factor                                          |                              |
+| | | | | | | | | | | | DotList                                       |                              |
+| | | | | | | | | | | | | Dot                                         |                              |
+| | | | | | | | | | | | | | Id                                        |               x              |
+| | | | | | | | | | | | | | IndiceReps                                |                              |
+| | | | | | | | Plus                                                  |               +              |
+| | | | | | | | ArithExpr                                             |                              |
+| | | | | | | | | Term                                                |                              |
+| | | | | | | | | | Factor                                            |                              |
+| | | | | | | | | | | DotList                                         |                              |
+| | | | | | | | | | | | Dot                                           |                              |
+| | | | | | | | | | | | | Id                                          |               b              |
+| | | | | | | | | | | | | IndiceReps                                  |                              |
+| | | | | AssignStatement                                             |                              |
+| | | | | | DotList                                                   |                              |
+| | | | | | | Dot                                                     |                              |
+| | | | | | | | Id                                                    |            result            |
+| | | | | | | | IndiceReps                                            |                              |
+| | | | | | AssignOp                                                  |               =              |
+| | | | | | Expr                                                      |                              |
+| | | | | | | AddOp                                                   |                              |
+| | | | | | | | ArithExpr                                             |                              |
+| | | | | | | | | Term                                                |                              |
+| | | | | | | | | | MultOp                                            |                              |
+| | | | | | | | | | | Factor                                          |                              |
+| | | | | | | | | | | | DotList                                       |                              |
+| | | | | | | | | | | | | Dot                                         |                              |
+| | | | | | | | | | | | | | Id                                        |            result            |
+| | | | | | | | | | | | | | IndiceReps                                |                              |
+| | | | | | | | | | | Mult                                            |                              |
+| | | | | | | | | | | Factor                                          |                              |
+| | | | | | | | | | | | DotList                                       |                              |
+| | | | | | | | | | | | | Dot                                         |                              |
+| | | | | | | | | | | | | | Id                                        |               x              |
+| | | | | | | | | | | | | | IndiceReps                                |                              |
+| | | | | | | | Plus                                                  |               +              |
+| | | | | | | | ArithExpr                                             |                              |
+| | | | | | | | | Term                                                |                              |
+| | | | | | | | | | Factor                                            |                              |
+| | | | | | | | | | | DotList                                         |                              |
+| | | | | | | | | | | | Dot                                           |                              |
+| | | | | | | | | | | | | Id                                          |               c              |
+| | | | | | | | | | | | | IndiceReps                                  |                              |
+| | | | | ReturnStatement                                             |                              |
+| | | | | | Expr                                                      |                              |
+| | | | | | | ArithExpr                                               |                              |
+| | | | | | | | Term                                                  |                              |
+| | | | | | | | | Factor                                              |                              |
+| | | | | | | | | | DotList                                           |                              |
+| | | | | | | | | | | Dot                                             |                              |
+| | | | | | | | | | | | Id                                            |            result            |
+| | | | | | | | | | | | IndiceReps                                    |                              |
+| | | MemberFunc                                                      |                              |
+| | | | Id                                                            |             build            |
+| | | | FParamsList                                                   |                              |
+| | | | | FParam                                                      |                              |
+| | | | | | Id                                                        |               A              |
+| | | | | | Type                                                      |             float            |
+| | | | | | ArraySize                                                 |                              |
+| | | | | FParam                                                      |                              |
+| | | | | | Id                                                        |               B              |
+| | | | | | Type                                                      |             float            |
+| | | | | | ArraySize                                                 |                              |
+| | | | | FParam                                                      |                              |
+| | | | | | Id                                                        |               C              |
+| | | | | | Type                                                      |             float            |
+| | | | | | ArraySize                                                 |                              |
+| | | | Type                                                          |           QUADRATIC          |
+| | | | VarDeclOrStat                                                 |                              |
+| | | | | VarDecl                                                     |                              |
+| | | | | | Id                                                        |         new_function         |
+| | | | | | Type                                                      |           QUADRATIC          |
+| | | | | | ArraySize                                                 |                              |
+| | | | | AssignStatement                                             |                              |
+| | | | | | DotList                                                   |                              |
+| | | | | | | Dot                                                     |                              |
+| | | | | | | | Id                                                    |         new_function         |
+| | | | | | | | IndiceReps                                            |                              |
+| | | | | | | Dot                                                     |                              |
+| | | | | | | | Id                                                    |               a              |
+| | | | | | | | IndiceReps                                            |                              |
+| | | | | | AssignOp                                                  |               =              |
+| | | | | | Expr                                                      |                              |
+| | | | | | | ArithExpr                                               |                              |
+| | | | | | | | Term                                                  |                              |
+| | | | | | | | | Factor                                              |                              |
+| | | | | | | | | | DotList                                           |                              |
+| | | | | | | | | | | Dot                                             |                              |
+| | | | | | | | | | | | Id                                            |               A              |
+| | | | | | | | | | | | IndiceReps                                    |                              |
+| | | | | AssignStatement                                             |                              |
+| | | | | | DotList                                                   |                              |
+| | | | | | | Dot                                                     |                              |
+| | | | | | | | Id                                                    |         new_function         |
+| | | | | | | | IndiceReps                                            |                              |
+| | | | | | | Dot                                                     |                              |
+| | | | | | | | Id                                                    |               b              |
+| | | | | | | | IndiceReps                                            |                              |
+| | | | | | AssignOp                                                  |               =              |
+| | | | | | Expr                                                      |                              |
+| | | | | | | ArithExpr                                               |                              |
+| | | | | | | | Term                                                  |                              |
+| | | | | | | | | Factor                                              |                              |
+| | | | | | | | | | DotList                                           |                              |
+| | | | | | | | | | | Dot                                             |                              |
+| | | | | | | | | | | | Id                                            |               B              |
+| | | | | | | | | | | | IndiceReps                                    |                              |
+| | | | | AssignStatement                                             |                              |
+| | | | | | DotList                                                   |                              |
+| | | | | | | Dot                                                     |                              |
+| | | | | | | | Id                                                    |         new_function         |
+| | | | | | | | IndiceReps                                            |                              |
+| | | | | | | Dot                                                     |                              |
+| | | | | | | | Id                                                    |               c              |
+| | | | | | | | IndiceReps                                            |                              |
+| | | | | | AssignOp                                                  |               =              |
+| | | | | | Expr                                                      |                              |
+| | | | | | | ArithExpr                                               |                              |
+| | | | | | | | Term                                                  |                              |
+| | | | | | | | | Factor                                              |                              |
+| | | | | | | | | | DotList                                           |                              |
+| | | | | | | | | | | Dot                                             |                              |
+| | | | | | | | | | | | Id                                            |               C              |
+| | | | | | | | | | | | IndiceReps                                    |                              |
+| | | | | ReturnStatement                                             |                              |
+| | | | | | Expr                                                      |                              |
+| | | | | | | ArithExpr                                               |                              |
+| | | | | | | | Term                                                  |                              |
+| | | | | | | | | Factor                                              |                              |
+| | | | | | | | | | DotList                                           |                              |
+| | | | | | | | | | | Dot                                             |                              |
+| | | | | | | | | | | | Id                                            |         new_function         |
+| | | | | | | | | | | | IndiceReps                                    |                              |
+| Impldef                                                             |                              |
+| | Id                                                                |            LINEAR            |
+| | ImplFuncDefRep                                                    |                              |
+| | | MemberFunc                                                      |                              |
+| | | | Id                                                            |             build            |
+| | | | FParamsList                                                   |                              |
+| | | | | FParam                                                      |                              |
+| | | | | | Id                                                        |               A              |
+| | | | | | Type                                                      |             float            |
+| | | | | | ArraySize                                                 |                              |
+| | | | | FParam                                                      |                              |
+| | | | | | Id                                                        |               B              |
+| | | | | | Type                                                      |             float            |
+| | | | | | ArraySize                                                 |                              |
+| | | | Type                                                          |            LINEAR            |
+| | | | VarDeclOrStat                                                 |                              |
+| | | | | VarDecl                                                     |                              |
+| | | | | | Id                                                        |         new_function         |
+| | | | | | Type                                                      |            LINEAR            |
+| | | | | | ArraySize                                                 |                              |
+| | | | | AssignStatement                                             |                              |
+| | | | | | DotList                                                   |                              |
+| | | | | | | Dot                                                     |                              |
+| | | | | | | | Id                                                    |         new_function         |
+| | | | | | | | IndiceReps                                            |                              |
+| | | | | | | Dot                                                     |                              |
+| | | | | | | | Id                                                    |               a              |
+| | | | | | | | IndiceReps                                            |                              |
+| | | | | | AssignOp                                                  |               =              |
+| | | | | | Expr                                                      |                              |
+| | | | | | | ArithExpr                                               |                              |
+| | | | | | | | Term                                                  |                              |
+| | | | | | | | | Factor                                              |                              |
+| | | | | | | | | | DotList                                           |                              |
+| | | | | | | | | | | Dot                                             |                              |
+| | | | | | | | | | | | Id                                            |               A              |
+| | | | | | | | | | | | IndiceReps                                    |                              |
+| | | | | AssignStatement                                             |                              |
+| | | | | | DotList                                                   |                              |
+| | | | | | | Dot                                                     |                              |
+| | | | | | | | Id                                                    |         new_function         |
+| | | | | | | | IndiceReps                                            |                              |
+| | | | | | | Dot                                                     |                              |
+| | | | | | | | Id                                                    |               b              |
+| | | | | | | | IndiceReps                                            |                              |
+| | | | | | AssignOp                                                  |               =              |
+| | | | | | Expr                                                      |                              |
+| | | | | | | ArithExpr                                               |                              |
+| | | | | | | | Term                                                  |                              |
+| | | | | | | | | Factor                                              |                              |
+| | | | | | | | | | DotList                                           |                              |
+| | | | | | | | | | | Dot                                             |                              |
+| | | | | | | | | | | | Id                                            |               B              |
+| | | | | | | | | | | | IndiceReps                                    |                              |
+| | | | | ReturnStatement                                             |                              |
+| | | | | | Expr                                                      |                              |
+| | | | | | | ArithExpr                                               |                              |
+| | | | | | | | Term                                                  |                              |
+| | | | | | | | | Factor                                              |                              |
+| | | | | | | | | | DotList                                           |                              |
+| | | | | | | | | | | Dot                                             |                              |
+| | | | | | | | | | | | Id                                            |         new_function         |
+| | | | | | | | | | | | IndiceReps                                    |                              |
+| | | MemberFunc                                                      |                              |
+| | | | Id                                                            |           evaluate           |
+| | | | FParamsList                                                   |                              |
+| | | | | FParam                                                      |                              |
+| | | | | | Id                                                        |               x              |
+| | | | | | Type                                                      |             float            |
+| | | | | | ArraySize                                                 |                              |
+| | | | Type                                                          |             float            |
+| | | | VarDeclOrStat                                                 |                              |
+| | | | | VarDecl                                                     |                              |
+| | | | | | Id                                                        |            result            |
+| | | | | | Type                                                      |             float            |
+| | | | | | ArraySize                                                 |                              |
+| | | | | AssignStatement                                             |                              |
+| | | | | | DotList                                                   |                              |
+| | | | | | | Dot                                                     |                              |
+| | | | | | | | Id                                                    |            result            |
+| | | | | | | | IndiceReps                                            |                              |
+| | | | | | AssignOp                                                  |               =              |
+| | | | | | Expr                                                      |                              |
+| | | | | | | ArithExpr                                               |                              |
+| | | | | | | | Term                                                  |                              |
+| | | | | | | | | Factor                                              |                              |
+| | | | | | | | | | FloatLit                                          |              0.0             |
+| | | | | AssignStatement                                             |                              |
+| | | | | | DotList                                                   |                              |
+| | | | | | | Dot                                                     |                              |
+| | | | | | | | Id                                                    |            result            |
+| | | | | | | | IndiceReps                                            |                              |
+| | | | | | AssignOp                                                  |               =              |
+| | | | | | Expr                                                      |                              |
+| | | | | | | AddOp                                                   |                              |
+| | | | | | | | ArithExpr                                             |                              |
+| | | | | | | | | Term                                                |                              |
+| | | | | | | | | | MultOp                                            |                              |
+| | | | | | | | | | | Factor                                          |                              |
+| | | | | | | | | | | | DotList                                       |                              |
+| | | | | | | | | | | | | Dot                                         |                              |
+| | | | | | | | | | | | | | Id                                        |               a              |
+| | | | | | | | | | | | | | IndiceReps                                |                              |
+| | | | | | | | | | | Mult                                            |                              |
+| | | | | | | | | | | Factor                                          |                              |
+| | | | | | | | | | | | DotList                                       |                              |
+| | | | | | | | | | | | | Dot                                         |                              |
+| | | | | | | | | | | | | | Id                                        |               x              |
+| | | | | | | | | | | | | | IndiceReps                                |                              |
+| | | | | | | | Plus                                                  |               +              |
+| | | | | | | | ArithExpr                                             |                              |
+| | | | | | | | | Term                                                |                              |
+| | | | | | | | | | Factor                                            |                              |
+| | | | | | | | | | | DotList                                         |                              |
+| | | | | | | | | | | | Dot                                           |                              |
+| | | | | | | | | | | | | Id                                          |               b              |
+| | | | | | | | | | | | | IndiceReps                                  |                              |
+| | | | | ReturnStatement                                             |                              |
+| | | | | | Expr                                                      |                              |
+| | | | | | | ArithExpr                                               |                              |
+| | | | | | | | Term                                                  |                              |
+| | | | | | | | | Factor                                              |                              |
+| | | | | | | | | | DotList                                           |                              |
+| | | | | | | | | | | Dot                                             |                              |
+| | | | | | | | | | | | Id                                            |            result            |
+| | | | | | | | | | | | IndiceReps                                    |                              |
+| FuncDef                                                             |                              |
+| | Id                                                                |             main             |
+| | FParamsList                                                       |                              |
+| | Type                                                              |             void             |
+| | VarDeclOrStat                                                     |                              |
+| | | VarDecl                                                         |                              |
+| | | | Id                                                            |              f1              |
+| | | | Type                                                          |            LINEAR            |
+| | | | ArraySize                                                     |                              |
+| | | VarDecl                                                         |                              |
+| | | | Id                                                            |              f2              |
+| | | | Type                                                          |           QUADRATIC          |
+| | | | ArraySize                                                     |                              |
+| | | VarDecl                                                         |                              |
+| | | | Id                                                            |            counter           |
+| | | | Type                                                          |            integer           |
+| | | | ArraySize                                                     |                              |
+| | | AssignStatement                                                 |                              |
+| | | | DotList                                                       |                              |
+| | | | | Dot                                                         |                              |
+| | | | | | Id                                                        |              f1              |
+| | | | | | IndiceReps                                                |                              |
+| | | | AssignOp                                                      |               =              |
+| | | | Expr                                                          |                              |
+| | | | | ArithExpr                                                   |                              |
+| | | | | | Term                                                      |                              |
+| | | | | | | Factor                                                  |                              |
+| | | | | | | | DotList                                               |                              |
+| | | | | | | | | Dot                                                 |                              |
+| | | | | | | | | | Id                                                |              f1              |
+| | | | | | | | | | IndiceReps                                        |                              |
+| | | | | | | | | Dot                                                 |                              |
+| | | | | | | | | | Id                                                |             build            |
+| | | | | | | | | | AParams                                           |                              |
+| | | | | | | | | | | Expr                                            |                              |
+| | | | | | | | | | | | ArithExpr                                     |                              |
+| | | | | | | | | | | | | Term                                        |                              |
+| | | | | | | | | | | | | | Factor                                    |                              |
+| | | | | | | | | | | | | | | IntLit                                  |               2              |
+| | | | | | | | | | | Expr                                            |                              |
+| | | | | | | | | | | | ArithExpr                                     |                              |
+| | | | | | | | | | | | | Term                                        |                              |
+| | | | | | | | | | | | | | Factor                                    |                              |
+| | | | | | | | | | | | | | | FloatLit                                |              3.5             |
+| | | AssignStatement                                                 |                              |
+| | | | DotList                                                       |                              |
+| | | | | Dot                                                         |                              |
+| | | | | | Id                                                        |              f2              |
+| | | | | | IndiceReps                                                |                              |
+| | | | AssignOp                                                      |               =              |
+| | | | Expr                                                          |                              |
+| | | | | ArithExpr                                                   |                              |
+| | | | | | Term                                                      |                              |
+| | | | | | | Factor                                                  |                              |
+| | | | | | | | DotList                                               |                              |
+| | | | | | | | | Dot                                                 |                              |
+| | | | | | | | | | Id                                                |              f2              |
+| | | | | | | | | | IndiceReps                                        |                              |
+| | | | | | | | | Dot                                                 |                              |
+| | | | | | | | | | Id                                                |             build            |
+| | | | | | | | | | AParams                                           |                              |
+| | | | | | | | | | | Expr                                            |                              |
+| | | | | | | | | | | | ArithExpr                                     |                              |
+| | | | | | | | | | | | | Term                                        |                              |
+| | | | | | | | | | | | | | Factor                                    |                              |
+| | | | | | | | | | | | | | | SignFactor                              |                              |
+| | | | | | | | | | | | | | | | Sign                                  |               -              |
+| | | | | | | | | | | | | | | | Factor                                |                              |
+| | | | | | | | | | | | | | | | | FloatLit                            |              2.0             |
+| | | | | | | | | | | Expr                                            |                              |
+| | | | | | | | | | | | ArithExpr                                     |                              |
+| | | | | | | | | | | | | Term                                        |                              |
+| | | | | | | | | | | | | | Factor                                    |                              |
+| | | | | | | | | | | | | | | FloatLit                                |              1.0             |
+| | | | | | | | | | | Expr                                            |                              |
+| | | | | | | | | | | | ArithExpr                                     |                              |
+| | | | | | | | | | | | | Term                                        |                              |
+| | | | | | | | | | | | | | Factor                                    |                              |
+| | | | | | | | | | | | | | | FloatLit                                |              0.0             |
+| | | AssignStatement                                                 |                              |
+| | | | DotList                                                       |                              |
+| | | | | Dot                                                         |                              |
+| | | | | | Id                                                        |            counter           |
+| | | | | | IndiceReps                                                |                              |
+| | | | AssignOp                                                      |               =              |
+| | | | Expr                                                          |                              |
+| | | | | ArithExpr                                                   |                              |
+| | | | | | Term                                                      |                              |
+| | | | | | | Factor                                                  |                              |
+| | | | | | | | IntLit                                                |               1              |
+| | | WhileStatement                                                  |                              |
+| | | | RelExpr                                                       |                              |
+| | | | | ArithExpr                                                   |                              |
+| | | | | | ArithExpr                                                 |                              |
+| | | | | | | Term                                                    |                              |
+| | | | | | | | Factor                                                |                              |
+| | | | | | | | | DotList                                             |                              |
+| | | | | | | | | | Dot                                               |                              |
+| | | | | | | | | | | Id                                              |            counter           |
+| | | | | | | | | | | IndiceReps                                      |                              |
+| | | | | RelOp                                                       |              <=              |
+| | | | | ArithExpr                                                   |                              |
+| | | | | | ArithExpr                                                 |                              |
+| | | | | | | Term                                                    |                              |
+| | | | | | | | Factor                                                |                              |
+| | | | | | | | | IntLit                                              |              10              |
+| | | | StatBlock                                                     |                              |
+| | | | | Statement                                                   |                              |
+| | | | | | WriteStatement                                            |                              |
+| | | | | | | Expr                                                    |                              |
+| | | | | | | | ArithExpr                                             |                              |
+| | | | | | | | | Term                                                |                              |
+| | | | | | | | | | Factor                                            |                              |
+| | | | | | | | | | | DotList                                         |                              |
+| | | | | | | | | | | | Dot                                           |                              |
+| | | | | | | | | | | | | Id                                          |            counter           |
+| | | | | | | | | | | | | IndiceReps                                  |                              |
+| | | | | Statement                                                   |                              |
+| | | | | | WriteStatement                                            |                              |
+| | | | | | | Expr                                                    |                              |
+| | | | | | | | ArithExpr                                             |                              |
+| | | | | | | | | Term                                                |                              |
+| | | | | | | | | | Factor                                            |                              |
+| | | | | | | | | | | DotList                                         |                              |
+| | | | | | | | | | | | Dot                                           |                              |
+| | | | | | | | | | | | | Id                                          |              f1              |
+| | | | | | | | | | | | | IndiceReps                                  |                              |
+| | | | | | | | | | | | Dot                                           |                              |
+| | | | | | | | | | | | | Id                                          |           evaluate           |
+| | | | | | | | | | | | | AParams                                     |                              |
+| | | | | | | | | | | | | | Expr                                      |                              |
+| | | | | | | | | | | | | | | ArithExpr                               |                              |
+| | | | | | | | | | | | | | | | Term                                  |                              |
+| | | | | | | | | | | | | | | | | Factor                              |                              |
+| | | | | | | | | | | | | | | | | | DotList                           |                              |
+| | | | | | | | | | | | | | | | | | | Dot                             |                              |
+| | | | | | | | | | | | | | | | | | | | Id                            |            counter           |
+| | | | | | | | | | | | | | | | | | | | IndiceReps                    |                              |
+| | | | | Statement                                                   |                              |
+| | | | | | WriteStatement                                            |                              |
+| | | | | | | Expr                                                    |                              |
+| | | | | | | | ArithExpr                                             |                              |
+| | | | | | | | | Term                                                |                              |
+| | | | | | | | | | Factor                                            |                              |
+| | | | | | | | | | | DotList                                         |                              |
+| | | | | | | | | | | | Dot                                           |                              |
+| | | | | | | | | | | | | Id                                          |              f2              |
+| | | | | | | | | | | | | IndiceReps                                  |                              |
+| | | | | | | | | | | | Dot                                           |                              |
+| | | | | | | | | | | | | Id                                          |           evaluate           |
+| | | | | | | | | | | | | AParams                                     |                              |
+| | | | | | | | | | | | | | Expr                                      |                              |
+| | | | | | | | | | | | | | | ArithExpr                               |                              |
+| | | | | | | | | | | | | | | | Term                                  |                              |
+| | | | | | | | | | | | | | | | | Factor                              |                              |
+| | | | | | | | | | | | | | | | | | DotList                           |                              |
+| | | | | | | | | | | | | | | | | | | Dot                             |                              |
+| | | | | | | | | | | | | | | | | | | | Id                            |            counter           |
+| | | | | | | | | | | | | | | | | | | | IndiceReps                    |                              |
+======================================================================================================

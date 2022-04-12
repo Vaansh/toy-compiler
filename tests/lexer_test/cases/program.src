@@ -1,0 +1,30 @@
+/**
+ * Licenses
+ */
+
+import example.library;   // Import example library
+
+public Example inherits Test impl TestLib {
+    public func main(self, name) -> float {		
+        // Variable declaration
+        var		name;
+		float	bank;
+        integer	age;
+
+        // Random language stuff
+        struct lib = example.library;
+		list = [];
+
+		integer idx = 0;
+        while (name != abc) | (age <> 3 and !bank) {
+			if len(list) == 0 {
+				list[idx] = bank;
+			} else {
+				idx = idx + 1;
+				bank = bank - idx;
+			}
+		}
+
+		return bank;
+    }
+}
